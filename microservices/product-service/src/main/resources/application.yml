@@ -1,0 +1,7 @@
+server.port: 9001
+server.error.include-message: always
+
+logging:
+  level:
+    root: INFO
+    example: DEBUG
