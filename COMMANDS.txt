@@ -1,0 +1,15 @@
+find /share/media/mp3/ -type f -name "*.mp3" -print0 | xargs -0 -r -I file cp -v -p file --target-directory=/bakup/iscsi/mp3
+
+
+```
+Append the spring docker config to end of file
+find . -type f -name application.yml -exec cat <<EOF >> {} \
+---\
+spring.config.activate.on-profile: docker\
+server.port: 8080\
+```
+
+```
+Append the list of folder at the end of file
+ls -l -d */ | awk '/\s[A-Za-z0-9]\s*/{ print substr($9,1,length($9)-1) >> "docker-compose.yml" }'
+```
