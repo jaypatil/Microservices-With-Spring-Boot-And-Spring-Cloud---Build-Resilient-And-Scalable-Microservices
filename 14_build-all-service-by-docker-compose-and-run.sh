@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -o xtrace
 
+# Let's build the project first
+./gradlew build -x test
+
 # Let's build the docker-compose.yml file
 docker-compose build
 

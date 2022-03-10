@@ -8,6 +8,7 @@ set -o xtrace
 # ├── product-service
 # ├── recommendation-service
 # └── review-service
+
 # api/core
 # ├── product
 # │   ├── Product.java
