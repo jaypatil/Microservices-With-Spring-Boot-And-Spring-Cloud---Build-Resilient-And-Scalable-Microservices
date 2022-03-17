@@ -3,7 +3,8 @@ set -o xtrace
 
 # 4. Now, we can build all the microservices with one command:
 
-./gradlew build -x test
+./gradlew build --info
+./gradlew build
 
 #> Run with --stacktrace option to get the stack trace.
 #> Run with --info or --debug option to get more log output.
