@@ -5,8 +5,6 @@ import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Objects;
-
 @Document(collection = "products")
 public class ProductEntity {
 
@@ -66,29 +64,5 @@ public class ProductEntity {
 
   public void setWeight(int weight) {
     this.weight = weight;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    ProductEntity that = (ProductEntity) o;
-    return weight == that.weight && Objects.equals(id, that.id) && Objects.equals(name, that.name);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name, weight);
-  }
-
-  @Override
-  public String toString() {
-    return "ProductEntity{" +
-            "id='" + id + '\'' +
-            ", version=" + version +
-            ", productId=" + productId +
-            ", name='" + name + '\'' +
-            ", weight=" + weight +
-            '}';
   }
 }

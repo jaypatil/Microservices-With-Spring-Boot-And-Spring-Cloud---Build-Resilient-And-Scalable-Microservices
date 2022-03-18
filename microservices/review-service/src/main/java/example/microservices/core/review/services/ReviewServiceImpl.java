@@ -51,7 +51,7 @@ public class ReviewServiceImpl implements ReviewService {
     if (productId < 1) {
       throw new InvalidInputException("Invalid productId: " + productId);
     }
-
+    
     List<ReviewEntity> entityList = repository.findByProductId(productId);
     List<Review> list = mapper.entityListToApiList(entityList);
     list.forEach(e -> e.setServiceAddress(serviceUtil.getServiceAddress()));
