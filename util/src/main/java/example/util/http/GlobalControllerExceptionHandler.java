@@ -28,6 +28,7 @@ class GlobalControllerExceptionHandler {
 
     return createHttpErrorInfo(BAD_REQUEST, request, ex);
   }
+  
   @ResponseStatus(NOT_FOUND)
   @ExceptionHandler(NotFoundException.class)
   public @ResponseBody HttpErrorInfo handleNotFoundExceptions(
