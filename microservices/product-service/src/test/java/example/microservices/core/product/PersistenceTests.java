@@ -79,7 +79,6 @@ class PersistenceTests extends MongoDbTestBase {
   void duplicateError() {
     assertThrows(DuplicateKeyException.class, () -> {
       ProductEntity entity = new ProductEntity(savedEntity.getProductId(), "n", 1);
-      entity.setId(savedEntity.getId());
       repository.save(entity);
     });
   }

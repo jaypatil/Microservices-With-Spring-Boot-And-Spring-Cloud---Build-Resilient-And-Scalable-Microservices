@@ -3,9 +3,11 @@ package example.microservices.core.product;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.MongoDBContainer;
+import org.testcontainers.utility.DockerImageName;
 
 public abstract class MongoDbTestBase {
-  private static MongoDBContainer database = new MongoDBContainer("mongo:4.4.2");
+
+  private static MongoDBContainer database = new MongoDBContainer(DockerImageName.parse("mongo:latest"));
   
   static {
     database.start();
