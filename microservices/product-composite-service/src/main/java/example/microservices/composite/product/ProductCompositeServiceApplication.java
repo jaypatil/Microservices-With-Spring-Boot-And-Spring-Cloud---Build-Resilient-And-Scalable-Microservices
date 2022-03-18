@@ -40,7 +40,7 @@ public class ProductCompositeServiceApplication {
     String apiContactEmail;
 
     /**
-     * Will exposed on $HOST:$PORT/swagger-ui.html
+     * Will exposed on $HOST:$PORT/openapi/swagger-ui.html
      *
      * @return the common OpenAPI documentation
      */
