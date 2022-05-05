@@ -13,3 +13,8 @@ server.port: 8080\
 Append the list of folder at the end of file
 ls -l -d */ | awk '/\s[A-Za-z0-9]\s*/{ print substr($9,1,length($9)-1) >> "docker-compose.yml" }'
 ```
+Kill Process on port
+kill -9 $(lsof -ti:3000)
+For multiple ports:
+
+kill -9 $(lsof -ti:3000,3001)
