@@ -11,7 +11,7 @@ docker rm $(docker ps -a -q)
 docker images -a | grep "microservices-with-spring-boot-and-spring-cloud-2e" | awk '{print $3}' | xargs docker rmi -f
 
 # Docker remove all images irrespective of creation
-docker rmi -f $(docker images -a -q)
+# docker rmi -f $(docker images -a -q)
 
 # List all the images available (Check)
 docker images -a

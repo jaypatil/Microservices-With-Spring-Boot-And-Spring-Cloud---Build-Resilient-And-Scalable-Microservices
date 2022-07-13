@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -o xtrace
 #
 # Sample usage:
 #
